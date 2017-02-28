@@ -1,0 +1,27 @@
+.mainbody{
+  margin: 0 auto;
+  background-color: #eee;
+  border: 1px solid #999;
+  overflow: auto;
+}
+.content{
+  background-color: white;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #999;
+}
+.left{
+  width: 160px;
+  float: left;
+  }
+.left img{
+  float: left;
+}
+.right{
+  width: 80px;
+  float: right;
+}
+.middle{
+  margin-left: 240px;
+  margin-right: 160px;
+}
