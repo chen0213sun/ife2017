@@ -388,27 +388,13 @@ button:hover{
 .d6 article{
   width: 34%;
   float: left;
-}
-.d6 article p:nth-of-type(1){
-  font-size: 21px;
-  font-family: SimHei;
-  text-align: center;
-  padding-top: 130px;
-  padding-bottom: 30px;
-}
-.d6 article p:nth-of-type(1) span{
-  color: #e74f4d;
-}
-.d6 article p:nth-of-type(2){
-  font-size: 12px;
-  font-family: SimSun;
-  color:#b7b7b7;
-  line-height: 3em;
-  width: 70%;
-  margin: 0 auto;
+  position: relative;
 }
 .d6 article a{
   display: block;
+  position: absolute;
+  top:370px;
+  right: 37%;
   border: 2px solid #e74f4d;
   color: #e74f4d;
   font-size: 16px;
@@ -417,7 +403,6 @@ button:hover{
   padding-top: 4px;
   padding-bottom: 4px;
   text-decoration: none;
-  margin: 40px auto 25px;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
@@ -427,20 +412,64 @@ button:hover{
   color: #ffffff;
   border-radius: 3px;
 }
-.d6 article .button{
-  text-align: center;
+.d6 article ul{
+  width: 100%;
+  height: 565px;
+  overflow: auto;
+  position: relative;
 }
-.d6 article button{
+.d6 article ul div,.d6 article input{
+  display: none;
+}
+.d6 article ul p:nth-of-type(1){
+  font-size: 21px;
+  font-family: "SimHei";
+  text-align: center;
+  padding-bottom: 30px;
+}
+.d6 article ul p:nth-of-type(1) span{
+  color: #e74f4d;
+}
+.d6 article ul p:nth-of-type(2){
+  font-size: 12px;
+  font-family: "SimSun";
+  color:#b7b7b7;
+  line-height: 3em;
+  margin: 0 auto;
+}
+.d6 article ul label{
   width: 10px;
   height: 10px;
   background-color: #ffffff;
   border: 1px solid #929293;
   border-radius: 5px;
-  display: inline-block;
-  margin: 0 7px;
+  display: block;
+  cursor: pointer;
 }
-.d6 article button:nth-of-type(1){
-  background-color: #929293;
+.d6 [id^='page']:checked~[id^='div']{
+  display: block;
+  position: absolute;
+  width: 70%;
+  top: 130px;
+  left: 15%;
+}
+.lab1{
+  position: absolute;
+  bottom: 100px;
+  left: 43%;
+}
+.lab2{
+  position: absolute;
+  bottom: 100px;
+  left: 49%;
+}
+.lab3{
+  position: absolute;
+  bottom: 100px;
+  left: 55%;
+}
+.d6 [id^='page']:checked~label{
+  background-color:#929293;
 }
 .d7{
   height: 520px;
