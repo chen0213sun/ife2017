@@ -8,7 +8,7 @@ function leftIn () {
     li.innerHTML = input;
     show.insertBefore(li,show.childNodes[0]);
   } else {
-    alert('请输入数字')
+    alert('请输入数字');
   }
 
 }
@@ -21,25 +21,27 @@ function rightIn() {
     li.innerHTML = input;
     show.appendChild(li);
   } else {
-    alert('请输入数字')
+    alert('请输入数字');
   }
 }
 document.getElementById('right-in').onclick=rightIn;
 //左侧出
 function leftOut() {
-  if (show.childNodes.length!=0) {
+  if (show.childNodes.length!==0) {
+    alert(show.firstChild.innerHTML);
     show.removeChild(show.firstChild);
   } else {
-    alert('还没有输入数字')
+    alert('还没有输入数字');
   }
 }
 document.getElementById('left-out').onclick=leftOut;
 //右侧出
 function rightOut() {
-  if (show.childNodes.length!=0) {
+  if (show.childNodes.length!==0) {
+    alert(show.firstChild.innerHTML);
     show.removeChild(show.lastChild);
   } else {
-    alert('还没有输入数字')
+    alert('还没有输入数字');
   }
 }
 document.getElementById('right-out').onclick=rightOut;
