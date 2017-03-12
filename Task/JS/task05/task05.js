@@ -6,7 +6,6 @@ function leftIn() {
     if (show.childNodes.length <= 60) {
         if (!isNaN(input) && input > 10 && input < 100) {
             var li = document.createElement('li');
-            li.style.width='5px';
             li.style.height=input+ 'px';
             show.insertBefore(li, show.childNodes[0]);
         } else {
@@ -24,7 +23,6 @@ function rightIn() {
     if (show.childNodes.length <= 60) {
         if (!isNaN(input) && input > 10 && input < 100) {
             var li = document.createElement('li');
-            li.style.width='5px';
             li.style.height=input+ 'px';
             show.appendChild(li);
         } else {
@@ -55,31 +53,34 @@ function rightOut() {
 }
 document.getElementById('right-out').onclick = rightOut;
 //排序
-function swap(items, firstIndex, secondIndex){
-  var temp = items[firstIndex];
-  items[firstIndex] = items[secondIndex];
-  items[secondIndex] = temp;
-}
-function bubbleSort(items){
-  var len = items.length, i, j, stop;
-  for (i = 0; i < len; i++){
-    for (j = 0, stop = len-i; j < stop; j++){
-      if (items[j] > items[j+1]){
-        swap(items, j, j+1);
-      }
-    }
-  }
-  return items;
-}
 function oursort () {
-  var orderAqi=[];
-  for (var i = 0; i < show.childNodes.length; i++) {
-    orderAqi[i]=parseInt(show.childNodes[i].style.height);
+  var orderAqi=[],i=0,j=1,clear=null,len=show.childNodes.length;
+  for (var n = 0; n< len; n++) {
+    orderAqi[n]=parseInt(show.childNodes[n].style.height);
   }
-  bubbleSort(orderAqi);
   console.log(orderAqi);
-  for (var j = 0; j < show.childNodes.length; j++) {
-    show.childNodes[j].style.height=orderAqi[j]+'px';
-  }
+  clear = setInterval(run,50);
+  console.log(orderAqi);
+  function run() {
+			if (i < len) {
+				if (j < len) {
+					if (orderAqi[i] > orderAqi[j]) {
+						temp = orderAqi[i];
+						orderAqi[i] = orderAqi[j];
+						orderAqi[j] = temp;
+						show.childNodes[i].style.height=orderAqi[i]+'px';
+						show.childNodes[j].style.height=orderAqi[j]+'px';
+					}
+					j++;
+				} else {
+					i++;
+					j = i + 1;
+				}
+			} else {
+				clearInterval(clear);
+				return;
+			}
+		}
 }
+
 document.getElementById('order').onclick=oursort;
