@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>task07</title>
+    <style>
+      #root{
+        display: flex;
+        margin: 100px auto;
+        justify-content: space-between;
+        align-items: stretch;
+        border: 1px solid #000;
+
+      }
+      .son{
+        margin: 20px;
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid #f00;
+        width: 45%;
+      }
+      .grandson{
+        margin: 20px;
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid #0f0;
+        width: 45%;
+      }
+      .grandson-son{
+        margin: 20px;
+        display: flex;
+        height: 150px;
+        width: 45%;
+        border: 1px solid #00f;
+      }
+      #btnarea{
+        margin: 50px auto;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div class="son">
+        <div class="grandson">
+          <div class="grandson-son"></div>
+          <div class="grandson-son"></div>
+        </div>
+        <div class="grandson">
+          <div class="grandson-son"></div>
+          <div class="grandson-son"></div>
+        </div>
+      </div>
+      <div class="son">
+        <div class="grandson">
+          <div class="grandson-son"></div>
+          <div class="grandson-son"></div>
+        </div>
+        <div class="grandson">
+          <div class="grandson-son"></div>
+          <div class="grandson-son"></div>
+        </div>
+      </div>
+    </div>
+    <ul id="btnarea">
+      <button type="button" id="pre">前序遍历</button>
+      <button type="button" id="in">中序遍历</button>
+      <button type="button" id="post">后序遍历</button>
+    </ul>
+    <script src="task07.js"></script>
+  </body>
+</html>
