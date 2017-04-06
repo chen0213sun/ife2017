@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>task01</title>
+    <style>
+    form{
+      width: 300px;
+      margin: 200px auto;
+    }
+        label {
+            width: 100px;
+            text-align: right;
+            display: inline-block;
+        }
+        div{
+          height: 60px;
+          position: relative;
+        }
+        span{
+          position: absolute;
+          top:40px;
+          left: 110px;
+          font-size: 12px;
+        }
+        button{
+          float: right;
+          margin-right: 45px;
+          border: none;
+          background-color: #2f79b9;
+          color: #fff;
+          padding: 5px 10px;
+          border-radius: 3px;
+          transition: all 0.4s ease-in-out;
+        }
+        button:hover{
+          background-color: blue;
+        }
+        input{
+          border: 1px solid grey;
+          width: 150px;
+          height: 30px;
+          border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="index.html" method="post">
+        <div id="name"><label>名称</label>
+            <input type="text"><span></span>
+        </div>
+        <div id="key"><label>密码</label>
+            <input type="password"><span></span>
+        </div>
+        <div id="keyconfirm"><label>密码确认</label>
+            <input type="password"><span></span>
+        </div>
+        <div id="email"><label>邮箱</label>
+            <input type="text"><span></span>
+        </div>
+        <div id="phone"><label>手机</label>
+            <input type="text"><span></span>
+        </div>
+        <button type="button" id="submit">确认</button>
+    </form>
+    <script src="task02.js"></script>
+</body>
+
+</html>

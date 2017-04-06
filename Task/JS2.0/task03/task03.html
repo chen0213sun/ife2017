@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>task03</title>
+    <style media="screen">
+    table{
+      margin: 50px auto;
+    }
+      table th:nth-of-type(1){
+        width: 100px;
+      }
+      table th:nth-of-type(2){
+        width: 400px;
+      }
+      table td{
+        height: 50px;
+        text-align: center;
+      }
+      th label{
+        margin-right: 100px;
+        cursor: pointer;
+      }
+
+      table td:nth-of-type(1){
+        text-align: right;
+      }
+      .hide{
+        display: none;
+      }
+      #city,#school,#work input{
+        height: 25px;
+        border-radius: 5px;
+        outline: none;
+      }
+      #city{
+        width: 120px;
+        margin-left: 25px;
+      }
+      #school{
+        width: 250px;
+      }
+      #work input{
+        width: 370px;
+        margin-left: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th></th>
+        <th><label><input type="radio" name="choose" checked>在校生</label>
+          <label><input type="radio" name="choose">非在校生</label></th>
+      </tr>
+      <tr id="city_school">
+        <td>学校</td>
+        <td><select id="city"></select>
+            <select id="school"></select>
+        </td>
+      </tr>
+      <tr id="work" class="hide">
+        <td>工作单位</td>
+        <td><input type="text" name="workplace"></td>
+      </tr>
+    </table>
+    <script src="task03.js"></script>
+  </body>
+</html>

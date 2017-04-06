@@ -1,0 +1,55 @@
+aside{
+  width: 400px;
+  float: left;
+  margin-right: 30px;
+}
+fieldset{
+  margin-bottom: 30px;
+  border: 2px solid black;
+}
+.hide{
+  display: none;
+}
+#type2 input{
+  width: 200px;
+}
+li{
+  display: inline-block;
+  padding: 5px;
+  background-color: blue;
+  color: #fff;
+  margin: 5px;
+}
+#type3 input{
+  width: 30px;
+}
+.showPlace{
+  float: left;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 5px;
+  width: 75%;
+  height: 300px;
+}
+#title{
+  display: block;
+  margin: 20px;
+}
+#show_all label{
+  margin-right: 10px;
+}
+.hint{
+  color: grey;
+  font-size: 14px;
+  margin-left: 20px;
+}
+.wrong{
+  color: red;
+  font-size: 14px;
+  margin-left: 20px;
+}
+.right{
+  color: green;
+  font-size: 14px;
+  margin-left: 20px;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>task01</title>
+    <style>
+      form{
+        margin: 300px auto 10px;
+        width: 410px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      label{
+        font-size: 18px;
+      }
+      div{
+        display: inline-block;
+        position: relative;
+        width: 280px;
+      }
+      #content{
+        width: 270px;
+        height: 30px;
+        border: 1px solid grey;
+        border-radius: 5px;
+        padding-left: 20px;
+        outline-style: none;
+      }
+
+      span{
+        font-size: 12px;
+        position: absolute;
+        top:40px;
+        left: 0;
+        color: grey;
+      }
+      #submit{
+        height: 32px;
+        background-color: #2f79b9;
+        color: #fff;
+        font-size: 18px;
+        border: none;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="index.html" method="post">
+      <label>名称</label>
+      <div>
+        <input type="text" id="content"><span>必填，长度为4~16个字符</span>
+      </div>
+      <button type="button" id="submit">验证</button>
+    </form>
+  <script src="task01.js"></script>
+  </body>
+</html>

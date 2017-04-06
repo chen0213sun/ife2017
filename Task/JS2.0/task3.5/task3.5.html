@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>task3.5</title>
+    <link rel="stylesheet" href="task3.5.css">
+</head>
+
+<body>
+    <aside>
+        <fieldset id="type">
+            <legend>类型</legend>
+            <label><input type="radio" name="type" checked>输入框</label>
+            <label><input type="radio" name="type">单选框</label>
+            <label><input type="radio" name="type">多选框</label>
+            <label><input type="radio" name="type">下拉框</label>
+            <label><input type="radio" name="type">文本域</label>
+        </fieldset>
+        <fieldset id="configure">
+            <legend>配置</legend>
+            <label>名称：<input type="text" name="" value="输入框"></label><br>
+            <label><input type="radio" name="choose" checked>必填</label>
+            <label><input type="radio" name="choose">选填</label>
+            <label>样式<select><option>样式一</option><option>样式二</option></select></label>
+        </fieldset>
+        <fieldset id="type1" class="">
+            <legend>规则</legend>
+            <label><input type="radio" name="rule" checked="">文字</label>
+            <label><input type="radio" name="rule">数字</label>
+            <label><input type="radio" name="rule">邮箱</label>
+            <label><input type="radio" name="rule">电话号码</label>
+            <label><input type="radio" name="rule">密码</label>
+        </fieldset>
+        <fieldset id="type2" class="hide">
+            <legend>选项</legend>
+            <input type="text" placeholder="可用空格来分隔选项，回车确认">
+            <button type="button" name="button" id="reset">重置</button>
+            <div id='selection'></div>
+        </fieldset>
+        <fieldset id="type3">
+            <legend>长度限制</legend>
+            <label>字符范围：<input type="number" value="4"> -- <input type="number" value="16"></label>
+        </fieldset>
+        <button type="button" name="button" id="add">提交</button>
+    </aside>
+    <div class="showPlace">
+        <span id="title">表单展示区</span>
+        <div id="show_all"></div>
+        <button type="button" name="button" class="hide" id="submit">提交</button>
+    </div>
+    <script src="task3.5.js"></script>
+    <script src="envent.js"></script>
+    <script src="setform.js"></script>
+    <script src="action.js"></script>
+    <script src="formaction.js"></script>
+</body>
+
+</html>
